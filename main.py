@@ -122,5 +122,5 @@ def add_disease(disease:str):
         msg=diseases[disease.lower().replace(" ","")]
     return msg
 if __name__=="__main__":
-    uvicorn.run("hospital_fees:hospital_fees_api",\
+    uvicorn.run("main:hospital_fees_api",\
 host="127.0.0.1",port=8000)
