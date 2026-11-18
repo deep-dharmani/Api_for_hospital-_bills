@@ -85,31 +85,6 @@ POST /
 |---|---|---|
 | disease | string | Name of the disease |
 
-### Example Request
-
-```http
-POST /?disease=commoncold
-```
-
-### Example Response
-
-```json
-{
-    "Doctor fee": 1000,
-    "Tests": 500,
-    "medicines": 800,
-    "Total": 2300
-}
-```
-
-### Invalid Disease
-
-If the requested disease is not available, the API returns:
-
-```text
-we did'nt treat that disease
-```
-
 ## 📖 API Documentation
 
 After running the server, access the interactive documentation:
