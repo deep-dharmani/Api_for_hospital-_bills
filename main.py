@@ -114,6 +114,8 @@ diseases.update({
     "meningitis": {"Doctor fee": 3500, "Tests": 4000, "medicines": 3000, "Total": 10500}
 
 })
+for disease_name, details in diseases.items():
+    details["is Disease Name"] =disease_name
 @hospital_fees_api.post("/")
 def add_disease(disease:str):
     disease.lower().replace(" ","")
