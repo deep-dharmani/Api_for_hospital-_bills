@@ -116,10 +116,11 @@ diseases.update({
 })
 @hospital_fees_api.post("/")
 def add_disease(disease:str):
+    disease.lower().replace(" ","")
     if disease not in diseases:
         msg=f"we did'nt treat that disease"
     else:
-        msg=diseases[disease.lower().replace(" ","")]
+        msg=diseases[disease]
     return msg
 if __name__=="__main__":
     uvicorn.run("main:hospital_fees_api",\
